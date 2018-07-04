@@ -9,6 +9,7 @@
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
 <body>
 	<div class="head">
@@ -151,6 +152,18 @@
 				}
 				ultrabooksArr.push(ultrabooksObj)
 			})
+			$('.ultrabooks-container').imagesLoaded( function() {
+				ultrabooksArr=[]
+				$('.ultrabooks-container').each(function(){
+					ultrabooksObj={
+						type:$(this).attr('data-type'),
+						top:$(this).offset().top,
+						timestamp:new Date().getTime()
+					}
+					ultrabooksArr.push(ultrabooksObj)
+				})
+				console.log(ultrabooksArr)
+			});
 			$(window).resize(function(){
 				ultrabooksArr=[]
 				$('.ultrabooks-container').each(function(){
@@ -205,6 +218,7 @@
 					scrollTop:0
 				},500)
 			})
+			
 	</script>
 </body>
 </html>
