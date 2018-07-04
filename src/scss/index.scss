@@ -430,6 +430,13 @@ body {
 	.ultrabooks-container h3{
 		font-size: 1.25rem;
 	}
+	.menu-bar,.else-menu-bar{
+		.menu-wrap,.else-menu-wrap{
+			.menu{
+				height: 53px;
+			}
+		}
+	}
 }
 @media screen and (max-width:320px){
 	.head{
@@ -440,5 +447,15 @@ body {
 	}
 	.ultrabooks-container h3{
 		font-size: 1rem;
+		&:after{
+			line-height: 37px;
+		}
+	}
+	.menu-bar,.else-menu-bar{
+		.menu-wrap,.else-menu-wrap{
+			.menu{
+				height: 39px;
+			}
+		}
 	}
 }
