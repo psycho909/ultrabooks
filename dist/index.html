@@ -146,9 +146,21 @@
 			$('.ultrabooks-container').each(function(){
 				ultrabooksObj={
 					type:$(this).attr('data-type'),
-					top:$(this).offset().top
+					top:$(this).offset().top,
+					timestamp:new Date().getTime()
 				}
 				ultrabooksArr.push(ultrabooksObj)
+			})
+			$(window).resize(function(){
+				ultrabooksArr=[]
+				$('.ultrabooks-container').each(function(){
+					ultrabooksObj={
+						type:$(this).attr('data-type'),
+						top:$(this).offset().top,
+						timestamp:new Date().getTime()
+					}
+					ultrabooksArr.push(ultrabooksObj)
+				})
 			})
 			$(window).scroll(function(){
 				var menuTop=$('.menu-bar').offset().top;
