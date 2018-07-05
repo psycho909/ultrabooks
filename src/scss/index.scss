@@ -462,7 +462,9 @@ body {
 				top: 0;
 				left: 0;
 				background-color: #4ba0ce;
-				line-height: 48px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 		}
 	}
