@@ -32,16 +32,18 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="menu-bar">
 		<div class="menu-wrap">
-			<div class="menu" data-type="asus"></div>
-			<div class="menu" data-type="acer"></div>
-			<div class="menu" data-type="office"></div>
-			<div class="menu" data-type="senior"></div>
-			<div class="menu" data-type="intel"></div>
+			<a href="#asus" class="menu" data-type="asus"></a>
+			<a href="#acer" class="menu" data-type="acer"></a>
+			<a href="#office" class="menu" data-type="office"></a>
+			<a href="#senior" class="menu" data-type="senior"></a>
+			<a href="#intel" class="menu" data-type="intel"></a>
 		</div>
 	</div>
-	<div class="ultrabooks-container" data-type="asus">
+
+	<div id="asus" class="ultrabooks-container" data-type="asus">
 		<h3 data-title="ASUS加碼 送 頭起款現金"><b></b>ASUS加碼<span class="for">送</span>頭起款現金</h3>
 		<div class="ultrabooks-wrap">
 			<div class="ultrabooks">
@@ -59,7 +61,7 @@
 		</div>
 	</div>
 
-	<div class="ultrabooks-container" data-type="acer">
+	<div id="acer" class="ultrabooks-container" data-type="acer">
 		<h3 data-title="acer加碼 送 原廠延長保固一年"><b></b>acer加碼<span class="for">送</span>原廠延長保固一年</h3>
 		<div class="ultrabooks-wrap">
 			<div class="ultrabooks">
@@ -77,7 +79,7 @@
 		</div>
 	</div>
 
-	<div class="ultrabooks-container" data-type="office">
+	<div id="office" class="ultrabooks-container" data-type="office">
 		<h3 data-title="送 Office365"><b></b><span class="for">送</span> Office365</h3>
 		<div class="ultrabooks-wrap">
 			<div class="ultrabooks">
@@ -113,7 +115,7 @@
 		</div>
 	</div>
 
-	<div class="ultrabooks-container" data-type="senior">
+	<div id="senior" class="ultrabooks-container" data-type="senior">
 		<h3 data-title="學長推薦 UltraBook"><b></b>學長推薦<span class="for">UltraBook</span></h3>
 		<div class="ultrabooks-wrap">
 			<div class="ultrabooks">
@@ -138,7 +140,7 @@
 			<img src="./images/yt02.jpg" alt="">
 		</a>
 	</div>
-	<div class="ultrabooks-container" data-type="intel">
+	<div id="intel" class="ultrabooks-container" data-type="intel">
 		<h3 data-title="Intel Optane 記憶體電腦"><b></b>Intel Optane 記憶體電腦  <span class="for">享30期0利率</span></h3>
 		<div class="ultrabooks-wrap">
 			<a class="ultrabooks intel-sbtn" href="http://www.elifemall.com.tw/intel/" target="_blank">
@@ -164,6 +166,7 @@
 			<a class="menu" href="http://www.elifemall.com.tw/allnewweb/store.php" target="_blank" data-title="查詢門市"></a>
 		</div>
 	</div>
+
 	<div class="to-top">
 		<span class="triangle"></span>
 		<span>TOP</span>
@@ -172,6 +175,18 @@
 		全國電子股份有限公司 Copyright © elifemall.com.tw All rights reserved.
 	</div>
 	<script>
+			$(window).on('load',function(){
+				var type=location.hash;
+				if( $(window).width() > 576 ){
+					$('body,html').animate({
+						scrollTop:$(type).offset().top-63
+					},10)
+				}else{$('body,html').animate({
+					scrollTop:$(type).offset().top-100
+					},10)
+
+				}
+			})
 			setTimeout(function(){
 				$('.slogan').addClass('active')
 			},500)
@@ -229,22 +244,20 @@
 				}
 				
 			})
-			$('.menu').on('click',function(){
+			$('a.menu').on('click',function(e){
 				var type=$(this).attr('data-type')
-				for(var i=0;i<ultrabooksArr.length;i++){
-					if(ultrabooksArr[i].type == type){
-						if( $(window).width() > 576 ){
-							$('body,html').animate({
-								scrollTop:ultrabooksArr[i].top-63
-							},500)
-						}else{$('body,html').animate({
-								scrollTop:ultrabooksArr[i].top-100
-							},500)
+				// e.preventDefault()
+				if( $(window).width() > 576 ){
+					$('body,html').animate({
+						scrollTop:$("#"+type).offset().top-63
+					},500)
+				}else{$('body,html').animate({
+					scrollTop:$("#"+type).offset().top-100
+					},500)
 
-						}
-					}
 				}
 			})
+
 			$('.to-top').on('click',function(){
 				$('body,html').animate({
 					scrollTop:0
