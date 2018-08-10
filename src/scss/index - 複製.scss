@@ -15,9 +15,6 @@ body {
 	width: 100%;
 	overflow: hidden;
 }
-nav{
-	display: none;
-}
 .head {
 	width: 100%;
 	height: 630px;
@@ -35,8 +32,8 @@ nav{
 			width: 291px;
 			height: 54px;
 			position: absolute;
-			top: 3%;
-			left: 2%;
+			top: 5%;
+			left: 5%;
 			background-image: url('../images/logo.png');
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -46,7 +43,7 @@ nav{
 			width: 828px;
 			height: 336px;
 			position: absolute;
-			bottom: 18%;
+			bottom: 10%;
 			left: 0;
 			opacity: 0;
 			transform: translate3d(0, -3000px, 0);
@@ -63,10 +60,10 @@ nav{
 			width: 376px;
 			height: 136px;
 			position: absolute;
-			top: 62%;
-			right: 26%;
+			top: 60%;
+			right: 0%;
 			opacity: 0;
-			transition: opacity .6s;
+			transition: all .6s;
 			transition-delay: 1s;
 			transform-origin: center center;
 			transform: translateY(-6%);
@@ -83,10 +80,10 @@ nav{
 			width: 629px;
 			height: 72px;
 			position: absolute;
-			bottom: 0%;
-			right: 26%;
+			bottom: 5%;
+			right: 0%;
 			opacity: 0;
-			transition: opacity .6s;
+			transition: all .6s;
 			transition-delay: 1s;
 			&.active{
 				opacity: 1;
@@ -96,63 +93,6 @@ nav{
 				width: 100%;
 			}
 		}
-		.video-boxs{
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			padding: 1rem;
-			background-color: #000;
-			border-radius:0 0 16px 16px;
-			width: 300px;
-			&:before{
-				content: attr(data-title);
-				width: 100%;
-				padding: 1.25rem 0;
-				text-align: center;
-				background-color: #000;
-				color:#fff;
-				position: absolute;
-				top: 0;
-				left: 0;
-				transform: translateY(-50%);
-				border-radius: 16px 16px 0 0;
-				z-index: 3;
-			}
-			a{
-				display: block;
-				position: relative;
-				
-				img{
-					width: 100%;
-					display: block;
-				}
-				&:before{
-					content:attr(data-title);
-					width: 100%;
-					height: 100%;
-					background-color:rgba(0,0,0,.5);
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					font-size: 1.25rem;
-					position: absolute;
-					top: 0;
-					left: 0;
-					color:#fff;
-					transition: all .3s;
-				}
-				&:hover:before{
-					opacity: 0;
-				}
-			}
-		}
-	}
-}
-.discount-boxs{
-	width: 100%;
-	display: none;
-	.discount-slide{
-		padding: 0 .5rem;
 	}
 }
 @keyframes moveUp{
@@ -163,30 +103,54 @@ nav{
 		transform: translateY(6%);
 	}
 }
+// .menu-bar {
+// 	width: 100%;
+// 	max-width: 1200px;
+// 	height: 51px;
+// 	margin: 0 auto;
+// 	margin-bottom: 1rem;
+// 	position: relative;
+// 	.menu-wrap {
+// 		width: 100%;
+// 		height: 51px;
+// 		display: flex;
+// 		justify-content: center;
+// 		&.active {
+// 			position: fixed;
+// 			top: 0;
+// 			left: 50%;
+// 			transform: translateX(-50%);
+// 			z-index: 9999;
+// 		}
+// 		.menu {
+// 			width: 196px;
+// 			height: 51px;
+// 			cursor: pointer;
+// 			margin-right: .75rem;
+// 			background-position: center 0;
+// 			background-repeat: no-repeat;
+// 			background-size: 100%;
+// 			@for $i from 1 through 5 {
+// 				&:nth-of-type(#{$i}) {
+// 					background-image: url('../images/menu-0#{$i}.png');
+// 				}
+// 			}
+// 			&:last-child {
+// 				margin-right: 0;
+// 			}
+// 		}
+// 	}
+// }
 
-.ultrabooks-container.life{
-	h3{
-		background-image: url('../images/title1.png');
-	}
-}
-.ultrabooks-container.dc{
-	h3{
-		background-image: url('../images/title2.png');
-	}
-}
-.ultrabooks-container.light{
-	h3{
-		background-image: url('../images/title3.png');
-	}
-}
 .ultrabooks-container {
 	width: 100%;
 	max-width: 1200px;
-	margin: 0 auto 3.5rem;
+	margin: 0 auto 2rem;
 	position: relative;
 	h3 {
 		width: 398px;
 		height: 71px;
+		background-image: url('../images/title.png');
 		background-repeat: no-repeat;
 		background-size: 100%;
 		font-weight: bold;
@@ -194,7 +158,7 @@ nav{
 		position: absolute;
 		top: 0;
 		left: 0;
-		transform: translate(0%, -50%) scale(.9);
+		transform: translate(50%, -50%) scale(.9);
 		z-index: 3;
 		span.for {
 			color: #fbff00;
@@ -211,14 +175,13 @@ nav{
 			background-repeat: no-repeat;
 			background-size: 100%;
 			z-index: 1;
-			display: none;
 		}
 	}
 	.ultrabooks-wrap {
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		padding: 3rem 0 0;
+		padding: 4rem 0 0;
 		background-color: #fff;
 		margin-top: 2rem;
 		border-radius: 6px;
@@ -243,29 +206,79 @@ nav{
 	width: 100%;
 	margin: 0 auto 2rem;
 	position: relative;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
+	overflow: hidden;
 	h2{
 		position: absolute;
 		top: 0;
 		left: 0;
 		transform: translate(-100%);
 	}
-	.discount-img{
-		width: 20%;
-		flex-basis: 20%;
-		transform-origin: top center;
-		transition: transform .3s;
-		cursor: pointer;
-		&:hover{
-			transform: rotate(-5deg);
+	.discount-wrap{
+		display: flex;
+		flex-wrap: wrap;
+		.discount-boxs{
+			flex-basis: 60%;
+			width: 60%;
+			padding: 0 1rem;
+			display: flex;
+			justify-content: space-around;
 		}
-		img{
-			width: 100%;
-			display: block;
-			padding: .5rem;
+		.video-boxs{
+			flex-basis: 40%;
+			width: 40%;
+			padding: 0 1rem;
+			.video{
+				display: block;
+				width: 400px;
+				margin: 0 auto;
+				position: relative;
+				padding: 1rem;
+				background-color: #000;
+				border-radius: 16px;
+
+				&:before{
+					content:'#學長幫你-吃土篇';
+					width: 100%;
+					height: 100%;
+					color:#fff;
+					font-size: 1.25rem;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					background-color: rgba(0,0,0,.5);
+					transition: all .3s;
+					border-radius: 16px;
+				}
+				&:hover:before{
+					opacity: 0;
+					// background-color: rgba(0,0,0,0);
+				}
+				img{
+					display: block;
+					margin: 0 auto;
+					width: 100%;
+				}
+			}
 		}
+		// .discount-box{
+		// 	flex-basis: 20%;
+		// 	width: 20%;
+		// 	transition: all .5s;
+		// 	transform-origin: top center;
+		// 	padding: 1rem 0;
+		// 	&:hover{
+		// 		transform: rotate(-8deg);
+		// 	}
+		// 	img{
+		// 		display: block;
+		// 		margin: 0 auto;
+		// 	}
+		// }
 	}
 }
 .discount-slide{
@@ -279,37 +292,57 @@ nav{
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 1rem;
+	padding: 2rem 0;
+	display: flex;
 	justify-content: center;
 	position: relative;
-	display: none;
-	.video-boxs{
-		// width: 300px;
-		padding: 1rem;
-		background: #000;
-		border-radius: 0 0 16px 16px;
+	
+	.video {
+		width: 400px;
+		// height: 225px;
+		background-color: rgba(0, 0, 0, .3);
+		display: block;
 		position: relative;
-		&:before{
-			content: attr(data-title);
+		margin-right: 1rem;
+		img {
 			width: 100%;
-			padding: 1.25rem 0;
-			text-align: center;
-			background-color: #000;
-			color:#fff;
+			display: block;
+		}
+		&:before{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
 			position: absolute;
 			top: 0;
 			left: 0;
-			transform: translateY(-50%);
-			border-radius: 16px 16px 0 0;
+			color:#fff;
+			text-align: center;
 			font-size: 1.25rem;
-			font-weight: bold;
+			transition: all .3s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
-		a{
-			display: block;
-			img{
-				width: 100%;
-				display: block;
-			}
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover:before{
+			opacity: 0;
+		}
+	}
+	.video-1{
+		&:before{
+			content:'全國電子 #學長幫你-輕薄篇';
+		}
+	}
+	.video-2{
+		&:before{
+			content:'全國電子 #學長幫你-保固篇';
+		}
+	}
+	.video-3{
+		&:before{
+			content:'全國電子 #學長幫你-月光寶盒篇';
 		}
 	}
 }
@@ -333,7 +366,7 @@ nav{
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
-	margin-bottom:4rem;
+	margin-bottom: 1rem;
 	position: relative;
 	.else-menu-wrap {
 		width: 100%;
@@ -376,8 +409,6 @@ nav{
 	transition: all .5s;
 	opacity: 0;
 	transform: scale(0);
-	z-index: 999;
-	display: none;
 	&.active{
 		opacity: 1;
 		transform: scale(1)
@@ -404,96 +435,6 @@ nav{
 }
 .swiper-container-android .swiper-slide, .swiper-wrapper{
 	text-align: center;
-}
-.fix-menu{
-	position: fixed;
-	bottom: 30%;
-	right: 12px;
-	z-index: 888;
-	.fix-slogan{
-		width: 110px;
-		height: 40px;
-		background-image: url('../images/fixmenu.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-		margin-bottom: 6px;
-	}
-	.title{
-		background-color: #de0d51;
-		padding:.5rem 1rem;
-		text-align: center;
-		color:#fff;
-		position: relative;
-		&:before{
-			content: "";
-			width: 89px;
-			height: 0;
-			border-top: 7px solid #a20538;
-			border-left: 10px solid transparent;
-			border-right: 10px solid transparent;
-			position: absolute;
-			bottom: -7px;
-			left: 0px;
-			z-index: 6;
-		}
-	}
-	ul{
-		position: relative;
-		width: 86px;
-		margin: 7px auto;
-		li{
-			background-color: #1baef5;
-			padding: .75rem 0;
-			cursor: pointer;
-			color: #fff;
-			border-bottom:1px dotted #98deff;
-			&.active{
-				background-color: #075d86;
-			}
-			span{
-				display: block;
-				text-align: center;
-				cursor: pointer;
-			}
-			&:last-child{
-				border-bottom: none;
-			}
-		}
-	}
-	.fix-top{
-		background-color: #de0d51;
-		padding:.5rem 1rem;
-		text-align: center;
-		color:#fff;
-		position: relative;
-		cursor: pointer;
-		&:before{
-			content: "";
-			width: 89px;
-			height: 0;
-			border-bottom: 7px solid #a20538;
-			border-left: 10px solid transparent;
-			border-right: 10px solid transparent;
-			position: absolute;
-			top: -7px;
-			left: 0px;
-			z-index: 6;
-		}
-		&:after{
-			content: "";
-			border-top: 10px solid #de0d51;
-			border-left: 56px solid transparent;
-			border-right: 56px solid transparent;
-			position: absolute;
-			bottom: -10px;
-			left: 0px;
-			z-index: 6;
-		}
-	}
-}
-.ultrabooks-container .ultrabooks-wrap .ultrabooks.big-col50{
-	flex-basis: 50%;
-	width: 50%;
 }
 @keyframes bounceInDown {
 	from,60%,75%,90%,
@@ -527,13 +468,10 @@ nav{
 			width: 100%;
 		}
 	}
-	.discount-container{
-		padding: 0 3rem;
-	}
 	.ultrabooks-container {
-		padding: 0 4rem;
+		padding: 0 2rem;
 		h3{
-			transform: translate(18%, -50%) scale(.9);
+			transform: translate(50%, -50%) scale(.9);
 		}
 		.ultrabooks-wrap{
 			.ultrabooks{
@@ -549,21 +487,18 @@ nav{
 		}
 	}
 	.head .head-wrap .slogan{
-		width: 575px;
+		width: 616px;
 		bottom: 0%;
 		left: 3%;
 	}
 	.head .head-wrap .slogan2{
-		width: 254px;
-		top: 63%;
-		right: 31%;
+		width: 292px;
+		top: 58%;
+		right: 4%;
 	}
 	.head .head-wrap .slogan3{
 		width: 543px;
-		right: 31%;
-	}
-	.head .head-wrap .video-boxs{
-		transform: scale(.9);
+		right: 3%;
 	}
 }
 
@@ -576,17 +511,15 @@ nav{
 	}
 	.head .head-wrap .slogan{
 		width: 452px;
-		height: 183px;
-		bottom: 26%;
+		height: 250px;
+		bottom: 0%;
 	}
 	.head .head-wrap .slogan2{
 		width: 237px;
-		height: 86px;
-		top: 57%;
+		top: 55%;
 	}
 	.head .head-wrap .slogan3{
 		width: 476px;
-		height: 54px;
 		bottom: 6%;
 	}
 	.menu-bar,.else-menu-bar {
@@ -601,12 +534,16 @@ nav{
 			}
 		}
 	}
+	.discount-container .discount-wrap .discount-boxs{
+        flex-basis: 50%;
+        width: 50%;
+    }
+    .discount-container .discount-wrap .video-boxs{
+        flex-basis: 50%;
+        width: 50%;
+	}
 	.ultrabooks-container h3:before{
 		transform: scale(.9);
-	}
-	.head .head-wrap .video-boxs{
-		transform: scale(0.6);
-		right: -45px;
 	}
 }
 
@@ -642,73 +579,31 @@ nav{
 			}
 		}
 	}
+	.video-container{
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		.video{
+			flex-basis: 50%;
+			margin-right: 0;
+		}
+	}
 	.discount-container .discount-wrap .discount-boxs{
         flex-basis: 100%;
         width: 100%;
     }
+    .discount-container .discount-wrap .video-boxs{
+        flex-basis: 100%;
+		width: 100%;
+		margin-top: 1rem;
+    }
 }
 @media screen and (max-width:768px){
-	.head{
-		margin-top: 54px;
-	}
-	nav{
-		width: 100%;
-		background-color: #fff;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		position: fixed;
-		top: 0;
-		z-index: 998;
-		border-bottom: 1px solid rgb(226, 226, 226);
-		.icon-box{
-			width: 100%;
-			display: flex;
-			padding: .75rem;
-			align-items: center;
-			.logo{
-				display: inline-block;
-				width: 160px;
-				img{
-					width: 100%;
-					display: block;
-				}
-			}
-			.menu{
-				margin-left: auto;
-				width: 30px;
-				height: 30px;
-				padding-top: 4px;
-			}
-		}
-		.menu-box{
-			flex-basis: 100%;
-			width: 100%;
-			height: 0;
-			transition: all .5s;
-			overflow: hidden;
-			li{
-				width: 100%;
-				a{
-					width: 100%;
-					padding: .75rem;
-					text-align: center;
-					display: inline-block;
-					text-decoration: none;
-					background-color: #00a3cc;
-					color:#fff;
-					border-bottom:1px solid #01b1dd;
-				}
-			}
-		}
-	}
 	.head{
 		background-image: url('../images/bg2.jpg');
 		height: 307px;
 		.head-wrap {
 			.logo{
 				width: 140px;
-				display: none;
 			}
 			.slogan{
 				display: none;
@@ -721,18 +616,8 @@ nav{
 			}
 		}
 	}
-	.discount-container{
-		padding: 0 2rem;
-	}
-	.ultrabooks-container{
-		margin: 3rem auto 2rem;
-		padding: 0 2rem;
-	}
 	.ultrabooks-container h3{
 		transform: translate(95px, -50%) scale(0.8);
-		&:before{
-			display: block;
-		}
 	}
 	.ultrabooks-container h3:before{
 		transform: scale(0.75);
@@ -747,48 +632,10 @@ nav{
 			}
 		}
 	}
-	.ultrabooks-container .ultrabooks-wrap .ultrabooks.big-col50{
-		flex-basis: 100%;
-		width: 100%;
-	}
-	.else-menu-bar {
-		display: none;
-	}
-	.video-container{
-		display: flex;
-		margin-top: 2rem;
-	}
-	.head .head-wrap .video-boxs{
-		display: none;
-	}
-	.discount-img{
-		display: none;
-	}
-	.discount-boxs{
-		display: block;
-		margin-bottom: 1rem;
-	}
-	.fix-menu{
-		display: none;
-	}
-	.to-top{
-		display: flex;
-	}
-	.ultrabooks-container .ultrabooks-wrap .ultrabooks img{
-		padding: .5rem;
-	}
 }
 @media screen and (max-width:576px){
-	nav .icon-box .logo{
-		width: 131px;
-	}
-	nav .icon-box .menu{
-		width: 26px;
-		height: 26px;
-	}
 	.head{
 		height: 225px;
-		margin-top: 51px;
 		.head-wrap{
 			.slogan{
 				width: 70%;
@@ -796,18 +643,15 @@ nav{
 			}
 		}
 	}
-	.discount-container{
-		padding: 0 1rem;
-	}
 	.ultrabooks-container{
-		margin-top: 3.5rem;
+		margin-top: 2rem;
 		padding: 0 1rem;
 		h3{
 			transform: translate(14px, -50%) scale(0.7);
 		}
 		.ultrabooks-wrap .ultrabooks{
 			img{
-				// border-right: none;
+				border-right: none;
 			}
 		}
 	}
@@ -835,7 +679,26 @@ nav{
 	.ultrabooks-container .ultrabooks-wrap{
 		padding: 2rem 0 0;
 	}
-
+	// .menu-bar {
+	// 	.menu-wrap{
+	// 		.menu{
+	// 			width: 240px;
+	// 			height: 63px;
+	// 			@for $i from 1 through 5 {
+	// 				&:nth-of-type(#{$i}) {
+	// 					background-image: url('../images/mobile/menu-0#{$i}.png');
+	// 				}
+	// 			}
+	// 			&:hover{
+	// 				@for $i from 1 through 5 {
+	// 					&:nth-of-type(#{$i}) {
+	// 						background-image: url('../images/mobile/menu-0#{$i}.png');
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 	.else-menu-bar {
 		.else-menu-wrap{
 			.menu{
@@ -852,13 +715,20 @@ nav{
 			font-size: 1rem;
 		}
 	}
+	.video-container {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 1rem;
+		.video{
+			flex-basis: 100%;
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
+	}
 }
 @media screen and (max-width:414px){
-	.ultrabooks-container h3{
-		background-image: none !important;
-	}
 	.head{
-		height: 172px;
+		height: 175px;
 		background-position: 50% center;
 	}
 
@@ -869,50 +739,44 @@ nav{
 			}
 		}
 	}
-	.ultrabooks-container{
-		margin: -1rem auto 1rem;
-	}
-	.ultrabooks-container .ultrabooks-wrap .ultrabooks img{
-		padding: .5rem;
-	}
 	.ultrabooks-container h3{
 		transform: translate(0,0);
 		background-image: none;
 		width: 100%;
-		position: relative;
 		&:after{
-			content:attr(data-title);
-			font-size: 1.25rem;
+			content:"學長推薦商品";
+			font-size: 1.6rem;
 			position: absolute;
-			width: 100%;
+			width: 80%;
 			background-color: #00a3cc;
-			padding: .75rem 0;
-			top: 100px;
-			left: 50%;
 			text-align: center;
+			padding: 1rem;
+			top: 50%;
+			left: 50%;
 			transform: translate(-50%,-50%);
 		}
 		&:before{
-			top: -33px;
-			left: -13%;
-			transform: scale(0.5);
+			top: -95px;
+			left: -12%;
+			transform: scale(0.55);
 		}
 	}
 	.discount-container .discount-wrap .video-boxs .video{
 		width: 100%;
 	}
-	.discount-container{
-		margin: 0 auto;
+	.ultrabooks-container .ultrabooks-wrap .ultrabooks{
+		width: 100%;
+		flex-basis: 100%;
 	}
-	.discount-boxs{
-		margin-bottom: 0;
+	.video-container .video:before{
+		font-size: 1rem;
 	}
 	.footer{
 		padding: .5rem;
 		font-size: .9rem;
 	}
 	.ultrabooks-container .ultrabooks-wrap{
-		padding: 1rem 0 0;
+		padding: 3.5rem 0 0;
 	}
 }
 @media screen and (max-width:320px){
