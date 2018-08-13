@@ -122,6 +122,11 @@ $(window).scroll(function (e) {
             $('.to-top').removeClass('active')
         }
     }
+    if($(document).scrollTop() > $('.ultrabooks-container').eq(0).offset().top-200){
+        $('.fix-menu').addClass('showIn')
+    }else{
+        $('.fix-menu').removeClass('showIn')
+    }
 
 })
 $(window).resize(function () {

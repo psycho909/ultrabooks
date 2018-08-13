@@ -26,6 +26,10 @@ nav{
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+	overflow: hidden;
+	.mobile-header{
+		display: none;
+	}
 	.head-wrap {
 		width: 1200px;
 		height: 100%;
@@ -86,10 +90,12 @@ nav{
 			bottom: 0%;
 			right: 26%;
 			opacity: 0;
-			transition: opacity .6s;
-			transition-delay: 1s;
+			transition: all .5s ease-in;
+			transition-delay: 1.5s;
+			transform: skewX(120deg);
 			&.active{
 				opacity: 1;
+				transform: skewX(0deg);
 			}
 			img{
 				display: block;
@@ -196,6 +202,12 @@ nav{
 		left: 0;
 		transform: translate(0%, -50%) scale(.9);
 		z-index: 3;
+		strong{
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate(-10000%);
+		}
 		span.for {
 			color: #fbff00;
 		}
@@ -405,11 +417,22 @@ nav{
 .swiper-container-android .swiper-slide, .swiper-wrapper{
 	text-align: center;
 }
+.h1-seo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-100%);
+}
 .fix-menu{
 	position: fixed;
 	bottom: 30%;
 	right: 12px;
 	z-index: 888;
+	transition: all .3s;
+	opacity: 0;
+	&.showIn{
+		opacity: 1;
+	}
 	.fix-slogan{
 		width: 110px;
 		height: 40px;
@@ -589,8 +612,8 @@ nav{
 		height: 54px;
 		bottom: 6%;
 	}
-	.menu-bar,.else-menu-bar {
-		.menu-wrap,.else-menu-wrap {
+	.else-menu-bar {
+		.else-menu-wrap {
 			height: 47px;
 			.menu{
 				width: 180px;
@@ -612,8 +635,8 @@ nav{
 
 @media screen and (max-width:800px){
 
-	.menu-bar,.else-menu-bar {
-		.menu-wrap,.else-menu-wrap {
+	.else-menu-bar {
+		.else-menu-wrap {
 			.menu{
 				background-position: center center;
 				background-size: 100%;
@@ -703,9 +726,18 @@ nav{
 		}
 	}
 	.head{
-		background-image: url('../images/bg2.jpg');
-		height: 307px;
+		background-image: none;
+		height: auto;
+		.mobile-header{
+			display: block;
+			width: 100%;
+			img{
+				width: 100%;
+				display: block;
+			}
+		}
 		.head-wrap {
+			display: none;
 			.logo{
 				width: 140px;
 				display: none;
@@ -787,7 +819,6 @@ nav{
 		height: 26px;
 	}
 	.head{
-		height: 225px;
 		margin-top: 51px;
 		.head-wrap{
 			.slogan{
@@ -814,9 +845,9 @@ nav{
 	.ultrabooks-container h3:before{
 		left: -118px;
 	}
-	.menu-bar,.else-menu-bar{
+	.else-menu-bar{
 		height: auto;
-		.menu-wrap,.else-menu-wrap{
+		.else-menu-wrap{
 			height: auto;
 			padding: .75rem;
 			flex-wrap: wrap;
@@ -857,13 +888,9 @@ nav{
 	.ultrabooks-container h3{
 		background-image: none !important;
 	}
-	.head{
-		height: 172px;
-		background-position: 50% center;
-	}
 
-	.menu-bar,.else-menu-bar{
-		.menu-wrap,.else-menu-wrap{
+	.else-menu-bar{
+		.else-menu-wrap{
 			.menu{
 				height: 53px;
 			}
@@ -916,9 +943,6 @@ nav{
 	}
 }
 @media screen and (max-width:320px){
-	.head .head-wrap .slogan{
-		height: 120px;
-	}
 	.menu-bar,.else-menu-bar{
 		.menu-wrap,.else-menu-wrap{
 			.menu{
