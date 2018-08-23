@@ -20,7 +20,7 @@
 	<title>全國電子 學長幫你 ∣ 開學季～超優惠!!! 就找全國電子</title>
 	<link rel="stylesheet" href="./css/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="./css/swiper.min.css">
-	<link rel="stylesheet" href="./css/index.css?v=2018983213123123">
+	<link rel="stylesheet" href="./css/index.css?v=<?php echo time(); ?>">
 
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/swiper.min.js"></script>
@@ -95,19 +95,19 @@
 		</div>
 		<div class="discount-container">
 			<figure class="discount-img">
-				<img src="./images/discount/1.png" alt="輕薄筆電 送 office家用一年訂購下載版">
+				<img src="./images/discount/1.png?v=<?php echo time(); ?>" alt="輕薄筆電 送 office家用一年訂購下載版">
 			</figure>
 			<figure class="discount-img">
-				<img src="./images/discount/2.png" alt="效能筆電 送 4GB記憶體">
+				<img src="./images/discount/2.png?v=<?php echo time(); ?>" alt="效能筆電 送 4GB記憶體">
 			</figure>
 			<figure class="discount-img">
-				<img src="./images/discount/3.png" alt="電競筆電 送 電競耳機">
+				<img src="./images/discount/3.png?v=<?php echo time(); ?>" alt="電競筆電 送 電競耳機">
 			</figure>
 			<figure class="discount-img">
-				<img src="./images/discount/4.png" alt="電競桌電 送 電競椅">
+				<img src="./images/discount/4.png?v=<?php echo time(); ?>" alt="電競桌電 送 電競椅">
 			</figure>
 			<figure class="discount-img">
-				<img src="./images/discount/5.png" alt="手機/螢幕 送 高解析雙體藍芽喇叭一組">
+				<img src="./images/discount/5.png?v=<?php echo time(); ?>" alt="手機/螢幕 送 高解析雙體藍芽喇叭一組">
 			</figure>
 			<div class="discount-boxs">
 				<div class="discount-swiper-container swiper-container">
@@ -196,7 +196,7 @@
 				</div>
 				{{#each suggest3}}
 				<div class="ultrabooks">
-					<img src="./images/suggest3/{{this}}.jpg?v=2018983213123123" alt="">
+					<img src="./images/suggest3/{{this}}.jpg" alt="">
 				</div>
 				{{/each}}
 			</div>
@@ -215,7 +215,7 @@
 			</div>
 		</div>
 	</script>
-	<script src="./js/main.js?v=2018983213123123"></script>
+	<script src="./js/main.js?v=12312312321"></script>
 </body>
 
 </html>
