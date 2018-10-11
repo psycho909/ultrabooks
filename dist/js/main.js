@@ -6,7 +6,7 @@ var ultrabooks_data = {
 for (var i = 1; i <= 18; i++) {
     ultrabooks_data.suggest.push(i)
 }
-for (var i = 1; i <= 36; i++) {
+for (var i = 1; i <= 34; i++) {
     ultrabooks_data.suggest2.push(i)
 }
 for (var i = 1; i <= 4; i++) {
