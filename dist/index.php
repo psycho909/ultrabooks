@@ -13,8 +13,6 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="全國電子_學長幫你 ∣ 開學季～超優惠!!! 就找全國電子" />
 	<meta property="og:description" content="全國電子 學長幫你 ∣ 開學季～超優惠!!! 就找全國電子,8/14-8/19開學季,筆電/桌電/平板享30期0利率再送頭期款現金,超值獨家優惠、就找全國電子,可使用國民旅遊卡消費" />
-	<!-- 1200 x 630  || 600 x 315 -->
-	<meta property="og:image" content="http://www.elifemall.com.tw/ultrabooks/images/fb.jpg" />
 
 
 	<title>全國電子 學長幫你 ∣ 開學季～超優惠!!! 就找全國電子</title>
